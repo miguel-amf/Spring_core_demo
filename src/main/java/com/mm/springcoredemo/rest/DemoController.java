@@ -12,7 +12,8 @@ public class DemoController {
     private final Coach myCoach;
 
     @Autowired
-    public DemoController( Coach theCoach) {
+    public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
+        System.out.println("Inside DemoController Constructor ");
         myCoach  = theCoach;
     }
 
